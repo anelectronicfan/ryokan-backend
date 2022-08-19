@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to ryokan, a poorly named app that scrapes and stores property listings from Japanese real estate websites.
 
-Things you may want to cover:
 
-* Ruby version
+I have no idea how version number conventions are so even this will be updated with time
 
-* System dependencies
+##v0.01 (19/08/2022)
 
-* Configuration
+- Added basic functionality to scrape properties from ieichiba.com
+- This will only scrape the first 10 properties from each prefecture because I haven't written code to loop through pagination yet
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
