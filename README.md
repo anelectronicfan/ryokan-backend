@@ -11,6 +11,11 @@ I have no idea how version number conventions are so even this will be updated w
 - This will only scrape the first 10 properties from each prefecture because I haven't written code to loop through pagination yet
 
 
+# TODO:
+#   - Add support for pagination
+#   - Modify for akiya-athome because ieichiba is dogwater
+
+
 Japanese Real estate website comparison from the perspective of webscraping (nokogiri)
 
 Ieichiba (House Ichiba Vacant House Sale Bulletin Board (ieichiba.com))

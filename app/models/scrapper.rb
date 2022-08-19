@@ -2,6 +2,11 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
+# TODO:
+#   - Add support for pagination
+#   - Modify for akiya-athome because ieichiba is dogwater
+
+
 class Scrapper
   
   def scrape_prefecture_urls
@@ -26,10 +31,6 @@ class Scrapper
         prefecture_urls << url # short for prefecture_urls.push
   
       end
-    
-    
-
-    
 
      scrape_listing_urls(prefecture_urls)
     
