@@ -34,31 +34,41 @@ class Scrapper
         end
       end
 
-    binding.pry
-
-     # scrape_listing_urls(prefecture_urls)
     
+
+     scrape_listing_urls(prefecture_urls)
+    
+  end
+
+  def scrape_page_urls(page_url)
+    # This method retrieves the url for each page in an index where pagination is used
+    # TODO: just fucking do it
   end
 
   def scrape_listing_urls(prefecture_urls)
 
     # this method loops through each prefecture, fetching every property it can find, and storing them as an array of html nodes
 
-    property_list = []
+    # TODO: Support the edge case where no properties exist in a given prefecture
+            # I.e skip this loop if properties don't exist
+    property_list_urls = []
 
     prefecture_urls.each do |url|
+      puts url
       html = open(url)
       doc = Nokogiri::HTML(html)
 
-      properties = doc.css('div.property__list-item')
+      properties = doc.css('section.propety')
       
       properties.each do |property|
-        property_list << property
+        url = property.css('a').first.attribute('href').value
+        property_list_urls << url
       end
       
+
     end
-    create_properties(property_list)
-    
+    # create_properties(property_list)
+    binding.pry
   end
   
   def create_properties(property_list)
@@ -94,5 +104,6 @@ end
 
 scrape = Scrapper.new
 scrape.scrape_prefecture_urls
+
 
 

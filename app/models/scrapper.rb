@@ -7,7 +7,7 @@ require 'pry'
 #   - Modify for akiya-athome because ieichiba is dogwater
 
 
-class Scrapper
+class Scrapper_ieichiba
   
   def scrape_prefecture_urls
 
