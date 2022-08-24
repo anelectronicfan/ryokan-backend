@@ -32,7 +32,7 @@ class Scrapper_ieichiba
   
       end
 
-     scrape_listing_urls(prefecture_urls)
+    scrape_listing_urls(prefecture_urls)
     
   end
 
