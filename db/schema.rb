@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_08_12_063147) do
     t.integer "price"
     t.integer "size"
     t.string "description"
-    t.date "built"
+    t.string "date_listed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

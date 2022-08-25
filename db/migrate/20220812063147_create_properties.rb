@@ -5,7 +5,7 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.integer :price
       t.integer :size
       t.string :description
-      t.date :built
+      t.string :date_listed
 
       t.timestamps
     end
