@@ -4233,3 +4233,250 @@ Migrating to AddUrlToProperty (20220826023536)
   ↳ bin/rails:4
   [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
   ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (7.9ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道夕張郡栗山町字中里25番地62"], ["price", 6500000], ["size", 96], ["description", "ＪＲ室蘭本線栗山駅/徒歩23分"], ["date_listed", "2022年8月18日"], ["created_at", "2022-08-26 02:47:19.526904"], ["updated_at", "2022-08-26 02:47:19.526904"], ["url", "https://kuriyama-t01429.akiya-athome.jp/bukken/detail/buy/21251"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.5ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道常呂郡佐呂間町字浜佐呂間"], ["price", 9800000], ["size", 0], ["description", "JR石北本線北見駅から45分、女満別空港から50分"], ["date_listed", "2022年8月16日"], ["created_at", "2022-08-26 02:47:19.544124"], ["updated_at", "2022-08-26 02:47:19.544124"], ["url", "https://saroma-t01552.akiya-athome.jp/bukken/detail/buy/21214"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道夕張郡栗山町松風３丁目105番／112番"], ["price", 4000000], ["size", 346], ["description", "ＪＲ室蘭本線栗山駅/徒歩10分"], ["date_listed", "2022年8月9日"], ["created_at", "2022-08-26 02:47:19.546858"], ["updated_at", "2022-08-26 02:47:19.546858"], ["url", "https://kuriyama-t01429.akiya-athome.jp/bukken/detail/buy/21154"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道磯谷郡蘭越町目名町430"], ["price", 5000000], ["size", 204], ["description", "ＪＲ函館本線目名駅/徒歩7分"], ["date_listed", "2022年8月3日"], ["created_at", "2022-08-26 02:47:19.549261"], ["updated_at", "2022-08-26 02:47:19.549261"], ["url", "https://rankoshi-t01394.akiya-athome.jp/bukken/detail/buy/21053"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道雨竜郡秩父別町1819番地2"], ["price", 500000], ["size", 371], ["description", "ＪＲ留萌本線秩父別駅/徒歩6分"], ["date_listed", "2022年7月28日"], ["created_at", "2022-08-26 02:47:19.551696"], ["updated_at", "2022-08-26 02:47:19.551696"], ["url", "https://chippubetsu-t01434.akiya-athome.jp/bukken/detail/buy/21020"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道夕張郡栗山町桜丘１丁目80番地18"], ["price", 5800000], ["size", 97], ["description", "ＪＲ室蘭本線栗山駅/車4分"], ["date_listed", "2022年7月25日"], ["created_at", "2022-08-26 02:47:19.554543"], ["updated_at", "2022-08-26 02:47:19.554543"], ["url", "https://kuriyama-t01429.akiya-athome.jp/bukken/detail/buy/20944"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道夕張郡栗山町字湯地"], ["price", 10000], ["size", 186], ["description", "ＪＲ室蘭本線栗山駅/車7分"], ["date_listed", "2022年7月11日"], ["created_at", "2022-08-26 02:47:19.556949"], ["updated_at", "2022-08-26 02:47:19.556949"], ["url", "https://kuriyama-t01429.akiya-athome.jp/bukken/detail/buy/20819"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道常呂郡佐呂間町字若佐45-21"], ["price", 860000], ["size", 356], ["description", "JR石北本線遠軽駅から車で40分、女満別空港から車で1時間"], ["date_listed", "2022年6月24日"], ["created_at", "2022-08-26 02:47:19.559271"], ["updated_at", "2022-08-26 02:47:19.559271"], ["url", "https://saroma-t01552.akiya-athome.jp/bukken/detail/buy/20601"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道常呂郡佐呂間町字若佐45-16"], ["price", 860000], ["size", 356], ["description", "JR石北本線遠軽駅から車で40分、女満別空港から車で1時間"], ["date_listed", "2022年6月24日"], ["created_at", "2022-08-26 02:47:19.561527"], ["updated_at", "2022-08-26 02:47:19.561527"], ["url", "https://saroma-t01552.akiya-athome.jp/bukken/detail/buy/20596"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道常呂郡佐呂間町字浜佐呂間160-22"], ["price", 930000], ["size", 365], ["description", "JR石北本線遠軽駅から車で40分、女満別空港から車で1時間"], ["date_listed", "2022年6月24日"], ["created_at", "2022-08-26 02:47:19.564084"], ["updated_at", "2022-08-26 02:47:19.564084"], ["url", "https://saroma-t01552.akiya-athome.jp/bukken/detail/buy/20603"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道常呂郡佐呂間町字浜佐呂間160-14"], ["price", 930000], ["size", 365], ["description", "JR石北本線遠軽駅から車で40分、女満別空港から車で1時間"], ["date_listed", "2022年6月24日"], ["created_at", "2022-08-26 02:47:19.566252"], ["updated_at", "2022-08-26 02:47:19.566252"], ["url", "https://saroma-t01552.akiya-athome.jp/bukken/detail/buy/20602"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字帯富154番地58"], ["price", 880000], ["size", 357], ["description", "ＪＲ根室本線浦幌駅/車2分"], ["date_listed", "2022年6月1日"], ["created_at", "2022-08-26 02:47:19.568404"], ["updated_at", "2022-08-26 02:47:19.568404"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20360"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字帯富154番地68"], ["price", 0], ["size", 357], ["description", "ＪＲ根室本線浦幌駅/車3分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.570533"], ["updated_at", "2022-08-26 02:47:19.570533"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20231"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字吉野38番地１"], ["price", 1500000], ["size", 495], ["description", "ＪＲ根室本線新吉野駅/徒歩5分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.572781"], ["updated_at", "2022-08-26 02:47:19.572781"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20223"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.3ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字寿町88番地１、87番地１の一部"], ["price", 3230000], ["size", 533], ["description", "ＪＲ根室本線浦幌駅/徒歩5分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.574971"], ["updated_at", "2022-08-26 02:47:19.574971"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20226"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字吉野189番地8"], ["price", 3000000], ["size", 1057], ["description", "ＪＲ根室本線新吉野駅/車3分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.577068"], ["updated_at", "2022-08-26 02:47:19.577068"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20228"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字栄町64番地３"], ["price", 10000], ["size", 3923], ["description", "ＪＲ根室本線浦幌駅/徒歩1分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.579120"], ["updated_at", "2022-08-26 02:47:19.579120"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20220"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字宝町53番地73"], ["price", 0], ["size", 198], ["description", "ＪＲ根室本線浦幌駅/車3分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.581177"], ["updated_at", "2022-08-26 02:47:19.581177"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20222"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道十勝郡浦幌町字本町70番地２"], ["price", 1500000], ["size", 317], ["description", "ＪＲ根室本線浦幌駅/徒歩1分"], ["date_listed", "2022年5月23日"], ["created_at", "2022-08-26 02:47:19.583274"], ["updated_at", "2022-08-26 02:47:19.583274"], ["url", "https://urahoro-t01649.akiya-athome.jp/bukken/detail/buy/20215"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/property.rb:5
+  [1m[36mProperty Create (0.2ms)[0m  [1m[32mINSERT INTO "properties" ("address", "price", "size", "description", "date_listed", "created_at", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["address", "北海道夕張郡栗山町朝日３丁目11番地"], ["price", 6000000], ["size", 49], ["description", "ＪＲ室蘭本線栗山駅/徒歩15分"], ["date_listed", "2022年1月20日"], ["created_at", "2022-08-26 02:47:19.585296"], ["updated_at", "2022-08-26 02:47:19.585296"], ["url", "https://kuriyama-t01429.akiya-athome.jp/bukken/detail/buy/18693"]]
+  ↳ app/models/property.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/property.rb:5
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "properties"[0m
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" ORDER BY "properties"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProperty Load (8.6ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" ORDER BY "properties"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (7.5ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.9ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.9ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProperty Destroy (0.2ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1

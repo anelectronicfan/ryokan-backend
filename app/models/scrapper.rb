@@ -94,7 +94,7 @@ class Scrapper
       
         prefecture_urls << url # short for prefecture_urls.push
       end
-      break # TODO: Remove this later, debug only
+      # break # TODO: Remove this later, debug only
     end
 
     
@@ -127,7 +127,7 @@ class Scrapper
       # loop through each page
 
       current_page = 2
-      page_count = 1 # TODO: Remove later, just for testing purposes
+      # page_count = 1 # TODO: Remove later, just for testing purposes
       if page_count > 2
         while current_page < page_count
           page_html = open("#{url}#?br_kbn=buy&pref_cd=#{'%02d' % current_page}&page=1&search_sort=kokai_date&item_count=20")
