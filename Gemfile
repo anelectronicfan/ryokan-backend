@@ -54,6 +54,7 @@ gem 'nokogiri'
 
 gem 'pry'
 gem 'pry-rails'
+gem 'colorize'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

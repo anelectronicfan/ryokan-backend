@@ -1,15 +1,17 @@
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require 'colorize'
 
 # TODO:
-#   - DONE: Add support for pagination
-#   - DONE: Modify for akiya-athome because akiya is dogwater
 #   - Error handling for timeouts
 #       - Need to implement code to try the connection again
 #       - OR extending the timeout threshold
-#   - Refactoring opening urls into a helper function (error handling goes here)
-#   - There are at least three different layouts for the site that change 
+#   - HALF: Refactoring opening urls into a helper function (error handling goes here)
+#   - DONE: Add more console logs, like a timer or a percentage meter, definitely some kind of alert notification when completed
+#   - DONE: Add support for pagination
+#   - DONE: Modify for akiya-athome because akiya is dogwater
+#   - DONE: There are at least three different layouts for the site that change 
 #     ever so slightly, the positions of certain bits of key data 
 #       - Need to figure out a more consistent approach
 #       - Look into .bukken-data.detail-table[0] - appears more consistent 
@@ -24,11 +26,16 @@ class Scrapper
     properties = doc.css('section.propety')
 
     property_list_urls = []
+    puts "Scraping #{properties.count} URLs".yellow #console logging for my own sanity
 
     properties.each do |property|
       url = property.css('a').first.attribute('href').value
       property_list_urls << url
+      puts "#{property_list_urls.count}/#{properties.count}".yellow #console logging for my own sanity
+
+
     end
+    puts "Scraped #{property_list_urls.count}/#{properties.count}".green #console logging for my own sanity
 
     property_list_urls
   end
@@ -52,11 +59,12 @@ class Scrapper
     updated_property
   end
 
-  def fetch_url(url)
+  def fetch(url)
     # Helper method that fetches and returns a webpage as nokogiri xml
-    html = open("#{akiya_url}/") # open is a open-uri method that takes a url and returns the content of its html source
+    html = URI.open("#{url}/") # open is a open-uri method that takes a url and returns the content of its html source
   
     doc = Nokogiri::HTML(html) # HTML is a method from Nokogiri that takes an html and returns it as a set of nested nodes
+    puts "Fetched #{url}".blue #console logging for my own sanity
 
 
     # TODO: Add error handling for timeouts
@@ -76,9 +84,7 @@ class Scrapper
 
     akiya_url = 'https://www.akiya-athome.jp'
   
-    html = open("#{akiya_url}/") # open is a open-uri method that takes a url and returns the content of its html source
-  
-    doc = Nokogiri::HTML(html) # HTML is a method from Nokogiri that takes an html and returns it as a set of nested nodes
+    doc = fetch(akiya_url)
 
     
     prefectures = doc.css('.governmentMap:not(.chugoku)').css('li').css('a') # doc.css is a method that uses the css selector to grab values of HTML elements as nodes, these can be chained together to retrieve specific values within nested nodes
@@ -112,9 +118,7 @@ class Scrapper
     property_list_urls = []
 
     prefecture_urls.each do |url|
-      puts url
-      html = open(url)
-      doc = Nokogiri::HTML(html)
+      doc = fetch(url)
 
       # find total number of entries
       listing_count = doc.css('.count').css('.hit').children.first.text.to_i
@@ -130,7 +134,7 @@ class Scrapper
       # page_count = 1 # TODO: Remove later, just for testing purposes
       if page_count > 2
         while current_page < page_count
-          page_html = open("#{url}#?br_kbn=buy&pref_cd=#{'%02d' % current_page}&page=1&search_sort=kokai_date&item_count=20")
+          page_html = URI.open("#{url}#?br_kbn=buy&pref_cd=#{'%02d' % current_page}&page=1&search_sort=kokai_date&item_count=20")
           page_doc = Nokogiri::HTML(page_html)
   
           property_list_urls.concat(scrape_property_urls(page_doc))
@@ -154,16 +158,15 @@ class Scrapper
   def scrape_properties(property_list_urls)
     property_list = []
     property_list_urls.each do |url|
-      html = open(url)
-      doc = Nokogiri::HTML(html)
+      doc = fetch(url)
       # details = doc.css('.bukken-data-detail.can-page-break-inside').css('.detail-table')
       details = doc.css('.bukken-data').css('.detail-table') 
       
       
       next if details == []
-      table = details.at('table')
-      table << "<span id = 'url' >#{url}</span>"
-      
+      table = details.at('table') # this returns the location of the first 'table' tag
+      table << "<span id = 'url' >#{url}</span>"  # inserting the url in a span tag
+                                                  # into the nodeSet to be passed on
       
       property_list << details
     end
@@ -178,6 +181,8 @@ class Scrapper
     # this method takes every property node, finds relevant info and stores them into their own respective hashes. Returns a collection (array of hashes)
     
     properties = []
+    puts "Creating #{property_list.count} properties".yellow #console logging for my own sanity
+
     property_list.each do |property|
       # size = ""
       # unless property[2].css('tr')[1].css('td')[1] # if size = nil, then find the size from somewhere else
@@ -217,11 +222,13 @@ class Scrapper
       }
       
       properties << format_property_hash(property_info)
+      
+      puts "#{properties.count}/#{property_list.count}".yellow #console logging for my own sanity
       # binding.pry
       
     end
     
-    
+    puts " It's done now motherfuckers. Seeding next".green
     properties  # same as return properties
   end
   
@@ -231,6 +238,7 @@ class Scrapper
 end
 
 ########################################################################
+
 
 scrape = Scrapper.new
 scrape.scrape_prefecture_urls
