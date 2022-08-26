@@ -7,9 +7,9 @@ require 'pry'
 #   - Modify for akiya-athome because ieichiba is dogwater
 
 
-class Scrapper_ieichiba
+class OldScrapper_ieichiba
   
-  def scrape_prefecture_urls
+  def Oldscrape_prefecture_urls
 
     # This method will take an index page of prefectures and fetch each prefectures' url, storing them in an array
 
@@ -32,11 +32,11 @@ class Scrapper_ieichiba
   
       end
 
-    scrape_listing_urls(prefecture_urls)
+    Oldscrape_listing_urls(prefecture_urls)
     
   end
 
-  def scrape_listing_urls(prefecture_urls)
+  def Oldscrape_listing_urls(prefecture_urls)
 
     # this method loops through each prefecture, fetching every property it can find, and storing them as an array of html nodes
 
@@ -88,7 +88,6 @@ class Scrapper_ieichiba
     
 end
 
-scrape = Scrapper.new
-scrape.scrape_prefecture_urls
+
 
 

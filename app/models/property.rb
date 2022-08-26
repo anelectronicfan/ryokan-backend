@@ -2,11 +2,12 @@ require 'colorize'
 class Property < ApplicationRecord
 
   def self.create_from_collection(properties)
-    properties.each do |property_hash, i|
+    puts "Seeding...".yellow
+    properties.each do |property_hash|
       Property.create(property_hash)
-      puts "/nSeeded #{i + 1}/#{properties.count}/n".orange
     end
-    puts "/n Done! #{Property.count} properties seeded! /n".green
+    puts "Done! #{Property.count} properties seeded! ".green
+    puts "Hope you enjoyed these two hours cunt ".green
   end
 
 

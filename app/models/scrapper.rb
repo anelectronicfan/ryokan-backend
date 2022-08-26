@@ -3,6 +3,10 @@ require 'open-uri'
 require 'pry'
 require 'colorize'
 
+# BUGS
+#   - Not sure if actually exists or just a one off, but the scraper just scraped twice before trying to seed
+#       - No wonder it took forever
+
 # TODO:
 #   - Error handling for timeouts
 #       - Need to implement code to try the connection again
@@ -15,6 +19,7 @@ require 'colorize'
 #     ever so slightly, the positions of certain bits of key data 
 #       - Need to figure out a more consistent approach
 #       - Look into .bukken-data.detail-table[0] - appears more consistent 
+#   - DONE: Fixed URI.open warning messages
 
 
 class Scrapper
@@ -79,6 +84,7 @@ class Scrapper
   ############## M A I N F U N C T I O N S ###################
   
   def scrape_prefecture_urls
+    puts 'def scrape_prefecture_urls'.light_blue
 
     # This method will take an index page of prefectures and fetch each prefectures' url, storing them in an array
 
@@ -110,6 +116,8 @@ class Scrapper
   end
 
   def scrape_listing_urls(prefecture_urls)
+    puts 'def scrape_listing_urls'.light_blue
+
 
     # this method loops through each prefecture, fetching every property it can find, and storing them as an array of html nodes
 
@@ -149,13 +157,9 @@ class Scrapper
     scrape_properties(property_list_urls)
   end
 
-  
-  
-  # NEXT STEPS
-  # We want to loop through each page in the property list url, 
-  # using Nokogiri to retrieve the data that we want
-
   def scrape_properties(property_list_urls)
+    puts 'scrape_properties'.light_blue
+
     property_list = []
     property_list_urls.each do |url|
       doc = fetch(url)
@@ -169,15 +173,14 @@ class Scrapper
                                                   # into the nodeSet to be passed on
       
       property_list << details
+      put "Scraped #{property_list.count}/#{property_list_urls.count} properties".yellow
     end
     create_properties(property_list)
   end
   
-  # We then want to sort said data into the corrected formatted hash 
-  # to be ready for seeding in the database
-  
-  
   def create_properties(property_list)
+    puts 'def create_properties'.light_blue
+
     # this method takes every property node, finds relevant info and stores them into their own respective hashes. Returns a collection (array of hashes)
     
     properties = []
@@ -223,25 +226,20 @@ class Scrapper
       
       properties << format_property_hash(property_info)
       
-      puts "#{properties.count}/#{property_list.count}".yellow #console logging for my own sanity
+      puts "Created #{properties.count}/#{property_list.count} Property hashes".yellow #console logging for my own sanity
       # binding.pry
-      
     end
-    
     puts " It's done now motherfuckers. Seeding next".green
     properties  # same as return properties
   end
   
-  
-
-    
 end
 
 ########################################################################
 
 
-scrape = Scrapper.new
-scrape.scrape_prefecture_urls
+# scrape = Scrapper.new
+# scrape.scrape_prefecture_urls
 
 
 
