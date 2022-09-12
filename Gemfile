@@ -57,6 +57,7 @@ gem 'pry-rails'
 gem 'colorize'
 gem 'benchmark'
 gem 'mechanize'
+gem 'selenium-webdriver'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
