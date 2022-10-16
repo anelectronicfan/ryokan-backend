@@ -173,7 +173,7 @@ class Scrapper
                                                   # into the nodeSet to be passed on
       
       property_list << details
-      put "Scraped #{property_list.count}/#{property_list_urls.count} properties".yellow
+      puts "Scraped #{property_list.count}/#{property_list_urls.count} properties".yellow
     end
     create_properties(property_list)
   end
