@@ -22,7 +22,14 @@ index = wait.until {
   button
 }.click
 
+btn_area = wait.until {
+  driver.find_element(:class, ".btn_area")
+}
+details_button = btn_area.find_element(tag_name: 'input')
 
+details = wait.until {
+  details_button
+}.click
 
 
 
