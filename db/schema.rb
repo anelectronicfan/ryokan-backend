@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_26_023536) do
+ActiveRecord::Schema.define(version: 2022_10_20_040001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.integer "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string "address"
@@ -24,6 +31,28 @@ ActiveRecord::Schema.define(version: 2022_08_26_023536) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "url"
+    t.string "transport"
+    t.string "notes"
+    t.integer "bedroom"
+    t.integer "bathroom"
+    t.integer "carspace"
+    t.decimal "building_area"
+    t.string "property_type"
+    t.date "build_date"
+    t.boolean "vacant_lot"
+    t.string "contact"
+    t.integer "views"
+  end
+
+  create_table "translations", force: :cascade do |t|
+    t.string "address"
+    t.string "transport"
+    t.string "description"
+    t.string "notes"
+    t.string "property_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "property_id"
   end
 
 end

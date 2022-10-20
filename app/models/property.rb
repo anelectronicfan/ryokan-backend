@@ -1,5 +1,7 @@
 require 'colorize'
 class Property < ApplicationRecord
+  has_one :translation
+  has_many :images
 
   def self.create_from_collection(properties)
     puts "Seeding...".yellow
