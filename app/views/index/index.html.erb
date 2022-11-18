@@ -18,3 +18,27 @@
   <button type="submit" class="search_button" name="button" access="false" id="button">Search</button>
 </form>
 
+
+<%= search_form_for @q, url: :index do |f| %>
+  <%= f.label :address_cont %>
+  <%= f.search_field :address_cont %>
+  <%= f.label :description_cont %>
+  <%= f.search_field :description_cont %>
+  <%= f.submit %>
+  <% end %>
+
+  <% @properties.each do |property|%>
+    <div class="card">
+        <div class="container">
+          <h4><b>Location</b></h4>
+          <p><%= property.address %></p>
+          <p>Price: <%= property.price %></p>
+          <p>Size: <%= property.size %></p>
+          <p>Description: <%= property.description %></p>
+          <p>Date Listed: <%= property.date_listed %></p>
+          <p>Source: <%= property.url %></p>
+          <button>More Info</button>
+        </div>
+    </div>
+    
+    <% end %>
