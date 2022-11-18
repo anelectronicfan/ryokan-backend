@@ -109,9 +109,14 @@ class Scrapper
       # break # TODO: Remove this later, debug only
     end
 
+    new_url = []
     
+    for a in 1..(prefecture_urls.length/2) do
+      new_url.push(prefecture_urls.pop)
 
-    scrape_listing_urls(prefecture_urls)
+    end
+    #scrape_listing_urls(prefecture_urls)
+    scrape_listing_urls(new_url)
     
   end
 

@@ -10,6 +10,4 @@ class Property < ApplicationRecord
     puts "Hope you enjoyed these two hours cunt ".green
   end
 
-
-
 end
