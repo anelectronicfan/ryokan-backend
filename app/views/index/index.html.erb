@@ -5,7 +5,7 @@
 <h1>cunt</h1>
 <p>Index page</p>
 
-<form class="search">
+<!-- <form class="search">
   <label for="location" class="long_label">
     <input type="text" id="location" placeholder="Location" class="long_input"/>
   </label>
@@ -17,13 +17,23 @@
   </label>
   <button type="submit" class="search_button" name="button" access="false" id="button">Search</button>
 </form>
-
+-->
 
 <%= search_form_for @q, url: :index do |f| %>
-  <%= f.label :address_cont %>
+  <%= f.label :address_cont, "Address" %>
   <%= f.search_field :address_cont %>
-  <%= f.label :description_cont %>
+  <%= f.label :price, "Price" %>
+  <%= f.text_field :price_gteq%>
+  <%= f.label :to, "to" %>
+  <%= f.text_field :price_lteq%>
+  <%= f.label :price, "Size" %>
+  <%= f.text_field :size_gteq%>
+  <%= f.label :to, "to" %>
+  <%= f.text_field :size_lteq%>
+  <%= f.label :description_cont, "Description" %>
   <%= f.search_field :description_cont %>
+  <%= f.label :date_listed_cont, "Date Listed" %>
+  <%= f.search_field :date_listed_cont %>
   <%= f.submit %>
   <% end %>
 
